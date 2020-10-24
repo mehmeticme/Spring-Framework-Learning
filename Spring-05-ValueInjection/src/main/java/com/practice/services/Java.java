@@ -11,6 +11,8 @@ import java.util.Arrays;
 
 @Component
 public class Java implements Course {
+    // @Value
+
     @Value("${student}")
     private String studentName;
 
