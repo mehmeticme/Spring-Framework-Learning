@@ -1,7 +1,6 @@
 package com.practice.services;
 
 import com.practice.interfaces.Course;
-import com.practice.interfaces.ExtraSessions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +9,7 @@ public class Java implements Course {
 
     // Field Injection
 //    @Autowired
-    private ExtraSessions extraSessions;
+    private OfficeHours officeHours;
 
 
     // ==================================================================
@@ -18,8 +17,8 @@ public class Java implements Course {
     // Constructor Injection
 
     @Autowired
-    public Java(ExtraSessions extraSessions) {
-        this.extraSessions = extraSessions;
+    public Java(OfficeHours officeHours) {
+        this.officeHours = officeHours;
     }
 
 
@@ -33,12 +32,12 @@ public class Java implements Course {
      // Constructor Injection
 
 
-    public ExtraSessions getExtraSessions() {
+    public OfficeHours getOfficeHours() {
         return extraSessions;
     }
 
     @Autowired
-    public void setExtraSessions(ExtraSessions extraSessions) {
+    public void setOfficeHours(OfficeHours extraSessions) {
         this.extraSessions = extraSessions;
     }
 
@@ -48,6 +47,6 @@ public class Java implements Course {
 
     @Override
     public void getLearningHours() {
-        System.out.println("Weekly learning hours: 20 +" + extraSessions.getHours());
+        System.out.println("Weekly learning hours: 20 +" + officeHours.getHours());
     }
 }
