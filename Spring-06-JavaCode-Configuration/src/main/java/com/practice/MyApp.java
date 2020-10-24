@@ -10,7 +10,6 @@ public class MyApp {
         ApplicationContext container = new AnnotationConfigApplicationContext(MyAppConfig.class);
 
         Course course = (Course) container.getBean("java");
-
-        course.getLearningHours();
+        System.out.println(course.toString());
     }
 }
