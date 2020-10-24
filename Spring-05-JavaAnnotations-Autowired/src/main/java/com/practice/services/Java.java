@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Java implements Course {
 
-    // Field Injection
+    // **** Field Injection ****
 //    @Autowired
     private OfficeHours officeHours;
 
