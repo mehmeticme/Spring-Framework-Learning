@@ -9,21 +9,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class Java implements Course {
 
-    /*
-      --- FIELD INJECTION ---
-    //@Autowired
-    //@Qualifier("officeHours")
 
-     */
-    private ExtraSessions extraSessions;
+    private ExtraSessions extraSessions1;
+    private ExtraSessions extraSessions2;
 
     @Autowired
-    public Java(@Qualifier("officeHours") ExtraSessions extraSessions) {
-        this.extraSessions = extraSessions;
+    public Java(@Qualifier("officeHours") ExtraSessions extraSessions1, @Qualifier("reviewHours") ExtraSessions extraSessions2) {
+        this.extraSessions1 = extraSessions1;
+        this.extraSessions2 = extraSessions2;
     }
+
 
     @Override
     public void getLearningHours() {
-        System.out.println("Weekly learning hours: 20 +" + extraSessions.getHours());
+        System.out.println("Weekly learning hours: 20 + Office Hours: " + extraSessions1.getHours() + " + Review Hours : "+extraSessions2.getHours());
     }
 }
