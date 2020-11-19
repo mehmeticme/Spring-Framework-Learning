@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> You are about to register for fall semester!</h2>
+
+
+<!-- Iteration -->
+<h3> Courses to Register</h3>
+<ul>
+    <li th:each="course : ${courses}" th:text="${course}"></li>
+</ul>
+
+</body>
+</html>
