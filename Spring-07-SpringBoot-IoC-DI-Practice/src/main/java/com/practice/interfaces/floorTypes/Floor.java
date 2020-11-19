@@ -1,2 +1,7 @@
-package com.practice.interfaces;public interface FloorTypes {
+package com.practice.interfaces.floorTypes;
+
+import java.math.BigDecimal;
+
+public interface Floor {
+    BigDecimal getArea();
 }
